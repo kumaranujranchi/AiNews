@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export",
+    "netlify-build": "next build"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",

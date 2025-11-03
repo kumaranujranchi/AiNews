@@ -9,6 +9,13 @@ import HeaderOne from "@/layouts/headers/HeaderOne";
 export const metadata = {
    title: "Blog Details Zaira - News Magazine React Next Js Template",
 };
+
+export async function generateStaticParams() {
+   const blogs = inner_blog_data.filter(items => items.page === "blog_1");
+   return blogs.map((blog) => ({
+      id: [blog.id.toString()],
+   }));
+}
 const index = ({ params }: { params: { id: number } }) => {
 
    const blogs = inner_blog_data.filter(items => items.page === "blog_1");

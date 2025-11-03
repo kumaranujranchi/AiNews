@@ -1,0 +1,10 @@
+# Redirect all routes to index.html for client-side routing
+/*    /index.html   200
+
+# API routes (if any)
+/api/*  /api/:splat  200
+
+# Handle specific routes
+/login  /login/index.html  200
+/admin  /admin/index.html  200
+/admin/*  /admin/index.html  200
