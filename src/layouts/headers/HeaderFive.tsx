@@ -44,8 +44,8 @@ const HeaderFive = () => {
                                           <strong>$0.00</strong>
                                        </li>
                                        <li className="header-sine-in">
-                                          <Link href="/contact"><i className="flaticon-user"></i>Sign In</Link>
-                                       </li>
+                                       <Link href="/login"><i className="flaticon-user"></i>Sign In</Link>
+                                    </li>
                                     </ul>
                                  </div>
                               </div>
