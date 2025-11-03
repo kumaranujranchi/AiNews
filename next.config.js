@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Temporarily disable static export for development
+  // Disable static export for admin functionality
   // output: 'export',
   // distDir: 'out',
   images: {
