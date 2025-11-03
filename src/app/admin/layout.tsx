@@ -12,6 +12,7 @@ interface AdminLayoutProps {
 export default function AdminLayout({ children }: AdminLayoutProps) {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
   const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState<any>(null);
   const router = useRouter();
   
   const supabase = getSupabaseClient();
@@ -30,21 +31,21 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
     if (!supabase) return;
     
     try {
-      const { data: { user } } = await supabase.auth.getUser();
+      const { data: { user: authUser } } = await supabase.auth.getUser();
       
-      if (!user) {
+      if (!authUser) {
         setIsAuthenticated(false);
         router.push('/login');
         return;
       }
 
-      setUser(user);
+      setUser(authUser);
 
       // Check if user is admin
       const { data: adminUser, error } = await supabase
         .from('admin_users')
         .select('*')
-        .eq('email', user.email)
+        .eq('email', authUser.email)
         .single();
 
       if (error || !adminUser) {

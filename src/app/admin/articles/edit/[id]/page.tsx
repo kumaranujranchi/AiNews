@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { getSupabaseClient } from '@/utils/supabaseClient';
+import { Article } from '@/types/cms';
 
 export default function EditArticlePage() {
   const router = useRouter();
@@ -106,10 +107,10 @@ export default function EditArticlePage() {
           .from('articles')
           .select('published_at')
           .eq('id', articleId)
-          .single();
+          .single() as { data: Pick<Article, 'published_at'> | null };
         
         if (!currentArticle?.published_at) {
-          updateData.published_at = new Date().toISOString();
+          (updateData as any).published_at = new Date().toISOString();
         }
       }
 
