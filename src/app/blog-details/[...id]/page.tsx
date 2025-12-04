@@ -7,7 +7,7 @@ import FooterOne from "@/layouts/footers/FooterOne";
 import HeaderOne from "@/layouts/headers/HeaderOne";
 
 export const metadata = {
-   title: "Blog Details Zaira - News Magazine React Next Js Template",
+   title: "Blog Details TimesAI - News Magazine React Next Js Template",
 };
 
 export async function generateStaticParams() {

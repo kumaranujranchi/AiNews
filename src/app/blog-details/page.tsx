@@ -2,7 +2,7 @@ import BlogDetails from "@/components/blogs/blog-details";
 import Wrapper from "@/layouts/Wrapper";
 
 export const metadata = {
-   title: "Blog Details Zaira - News Magazine React Next Js Template",
+   title: "Blog Details TimesAI - News Magazine React Next Js Template",
 };
 const index = () => {
    return (

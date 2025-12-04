@@ -89,7 +89,10 @@ const HeaderTopSix = () => {
                   </div>
                   <div className="col-lg-4">
                      <div className="logo text-center">
-                        <Link href="/"><Image src={img_2} alt="" /></Link>
+                        <Link href="/" className="d-flex align-items-center justify-content-center gap-2">
+                           <Image src="/favicon.png" alt="logo" width={35} height={35} />
+                           <h2 style={{ fontFamily: 'Nunito, sans-serif', color: '#2A4970', fontWeight: '800', margin: 0, fontSize: '32px', letterSpacing: '-1px' }}>TimesAI</h2>
+                        </Link>
                      </div>
                      <div className="logo d-none text-center">
                         <Link href="/"><Image src={img_3} alt="" /></Link>

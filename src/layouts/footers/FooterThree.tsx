@@ -15,7 +15,10 @@ const FooterThree = () => {
                      <div className="col-lg-3 col-md-7">
                         <div className="footer-widget">
                            <div className="fw-logo">
-                              <Link href="/"><Image src={footerLogo} alt="" /></Link>
+                              <Link href="/" className="d-flex align-items-center gap-2">
+                                 <Image src="/favicon.png" alt="logo" width={35} height={35} />
+                                 <h2 style={{ fontFamily: 'Nunito, sans-serif', color: '#2A4970', fontWeight: '800', margin: 0, fontSize: '32px', letterSpacing: '-1px' }}>TimesAI</h2>
+                              </Link>
                            </div>
                            <div className="footer-content">
                               <p>Browned butter and brown sugar caramelly goodness, crispy edges thick and soft centers and melty little puddles of chocolate.</p>

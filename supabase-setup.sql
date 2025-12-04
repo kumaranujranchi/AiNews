@@ -32,6 +32,17 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
 
+-- Create a function to execute arbitrary SQL (for admin setup scripts)
+CREATE OR REPLACE FUNCTION exec_sql(sql text)
+RETURNS void
+LANGUAGE plpgsql
+SECURITY DEFINER
+AS $$
+BEGIN
+  EXECUTE sql;
+END;
+$$;
+
 -- =====================================================
 -- 2. ARTICLES TABLE CREATION
 -- =====================================================
